@@ -6,6 +6,8 @@ export = plugin;
 type calendarType = 'jalali' | 'gregory';
 
 declare module 'dayjs' {
+  export function calendar(calendarType: calendarType): Dayjs;
+  
   interface Dayjs {
     calendar(calendarType: calendarType): Dayjs;
 
